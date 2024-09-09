@@ -5,60 +5,105 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+/* variables*/
+:root {
+    --container-color: #ff89eb;
+    --second-color: #c00ed8;
+    --text-color: #000;
+    --bg-color: #ffffff;
+}
+
+::selection {
+    color: #ffffff;
+    background: var(--second-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img{
+    width: 80%;
+}
+
+section {
+    padding: 3rem 0 2rem;
 }
 
 body{ font-family: "Poppins", system-ui;}
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
+    width: 100%;
 }
 
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.212),rgba(0,0,0,0.212)), url(images/pure-black-background-py9pa0f1mlsscm9s.png);
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 70vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
     display: flex;
     align-items: center;
 }
 
 .logo{
-    color: bisque;
+    color: var(--bg-color);
     font-size: 25px;
     font-weight: 800;
 }
 
-.menu .navbar ul li {
-    position: relative;
-    float: left;
+.home{
+    width: 100%;
+    min-height: 440px;
+    background-color: var(--container-color);
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
+
+
+
+
+
+
+
+
+
+
 
 .menu .navbar ul li{
     font-size: 18px;
     padding: 20px;
-    color: azure;
+    color: var(--second-color);
     display: block;
     font-weight: 600;
 }
 
 .menu .navbar ul li a:hover{
-    color: rgb(19, 187, 209);
+    color: var(--container-color);
 }
 
-.header-content h1 {
-    font-size: 70px;
-    line-height: 75px;
-    color: rgb(0, 0, 0);
-    text-transform: uppercase;
-    margin-bottom: auto;
-}
+
 
 .btn-1 {
     display: inline-block;
     padding: 11px 35px;
-    background-color: rgba(236, 89, 192, 0.589);
-    color: aliceblue;
+    background-color: var(--container-color);
+    color: var(--text-color);
     text-transform: uppercase;
 }
+
+.btn-1:hover{
+    background-color: var(--second-color);
+}
+
