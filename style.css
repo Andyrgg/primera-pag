@@ -11,14 +11,14 @@
 
 /* Variables */
 :root {
-    --container-color: #ff89eb;
-    --second-color: #c00ed8;
-    --text-color: #000;
-    --bg-color: #ffffff;
+    --container-color: #e3a1f3;
+    --second-color: #aa79b6;
+    --text-color: #715179;
+    --bg-color: #1c141e;
 }
 
 ::selection {
-    color: #ffffff;
+    color: var(--bg-color);
     background: var(--second-color);
 }
 
@@ -136,9 +136,5 @@ body {
     .navbar ul {
         flex-direction: column;
         align-items: center;
-    }
-
-    .post-list {
-        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
     }
 }
