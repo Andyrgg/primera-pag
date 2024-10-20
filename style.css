@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap');
+
+/* Reset de estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +17,8 @@
     --second-color: #aa79b6;
     --text-color: #715179;
     --bg-color: #1c141e;
+    --light-bg-color: #f9f9f9; /* Fondo claro para secciones como los posts */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra suave para los elementos */
 }
 
 ::selection {
@@ -23,15 +27,19 @@
 }
 
 body {
-    font-family: "Poppins", system-ui;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--light-bg-color);
+    color: var(--text-color);
 }
 
+/* Contenedor principal */
 .container {
     max-width: 1200px;
     margin: auto;
     width: 100%;
 }
 
+/* Header */
 .header {
     position: fixed;
     top: 0;
@@ -40,11 +48,29 @@ body {
     z-index: 200;
     background-color: var(--container-color);
     padding: 1rem 0;
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
 
-.logo {
+.header .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
     color: var(--bg-color);
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: 800;
 }
 
@@ -53,8 +79,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    padding: 1rem 0;
-    background-color: var(--container-color);
 }
 
 .navbar li {
@@ -72,22 +96,59 @@ body {
     color: var(--second-color);
 }
 
-/* Post Diseño Responsive */
+/* Sección de Inicio */
+.inicio {
+    width: 100%;
+    min-height: 440px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--bg-color);
+    color: var(--container-color);
+}
+
+.inicio-title {
+    font-size: 3.5rem;
+    color: var(--container-color);
+}
+
+/* Sección de Posts */
+.post-section {
+    padding: 2rem 0;
+}
+
+.recent-post-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+/* Posts Grid */
 .post-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Al menos 3 posts en pantallas grandes */
+    grid-template-columns: repeat(3, 1fr); /* Asegurando 3 posts por fila */
     gap: 2rem;
-    margin-top: 5rem; /* Ajustar margen superior para evitar sobreposición con el header */
+}
+
+.post {
+    background-color: var(--light-bg-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.post-img {
+    width: 100%; /* La imagen toma todo el ancho del post */
+    height: 200px; /* Altura fija */
+    object-fit: cover; /* La imagen se ajusta sin cortarse */
+    border-radius: 10px;
 }
 
 .post-content {
-    background-color: #f9f9f9;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
 }
 
-/* Fecha de publicación */
 .post-date {
     font-size: 0.875rem;
     color: #888;
@@ -100,6 +161,7 @@ body {
     background-color: var(--container-color);
     color: var(--text-color);
     text-transform: uppercase;
+    transition: background-color 0.3s ease;
 }
 
 .btn-1:hover {
@@ -136,5 +198,9 @@ body {
     .navbar ul {
         flex-direction: column;
         align-items: center;
+    }
+
+    .post-list {
+        grid-template-columns: 1fr; /* Posts en una columna para pantallas pequeñas */
     }
 }
