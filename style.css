@@ -99,7 +99,7 @@ body {
 /* Sección de Inicio */
 .inicio {
     width: 100%;
-    min-height: 440px;
+    min-height: 200px;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -109,7 +109,7 @@ body {
 }
 
 .inicio-title {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     color: var(--container-color);
 }
 
@@ -120,7 +120,7 @@ body {
 
 .recent-post-title {
     font-size: 1.5rem;
-    color: var(--text-color);
+    color: var(--bg-color);
     margin-bottom: 1rem;
 }
 
