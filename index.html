@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="es"> <!-- Idioma en español para mejorar accesibilidad -->
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Personal de Gene</title>
     
-    <!-- Preload de CSS para optimizar la carga de estilos -->
     <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Preload de fuentes importantes -->
     <link rel="preload" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" as="style">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -24,19 +21,19 @@
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Archivo</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Sobre mí</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#archivo">Archivo</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Home -->
-    <section class="inicio" id="home">
+    <section class="inicio" id="inicio">
         <div class="home-text container">
-            <h1 class="inicio-title">El blog de Gene</h1>
+            <h1 class="inicio-title">El blog<span> de Gene</span></h1>
         </div>
     </section>
 
@@ -48,7 +45,7 @@
                 <article class="post">
                     <img src="images/XGforinstyle.jpg" alt="Imagen relacionada con el post Lorem Ipsum" class="post-img">
                     <div class="post-content">
-                        <h2>Lorem Ipsum</h2>
+                        <h3>Lorem Ipsum</h3>
                         <p class="post-date">Publicado el: 12 de Octubre, 2024</p>
                         <p class="txt-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem tempora eos deleniti.</p>
                         <a href="#" class="btn-1">Leer más</a>
@@ -58,8 +55,18 @@
                 <article class="post">
                     <img src="images/XGforinstyle.jpg" alt="Imagen relacionada con el post Lorem Ipsum" class="post-img">
                     <div class="post-content">
-                        <h2>Lorem Ipsum</h2>
-                        <p class="post-date">Publicado el: 10 de Octubre, 2024</p>
+                        <h3>Lorem Ipsum</h3>
+                        <p class="post-date">Publicado el: 12 de Octubre, 2024</p>
+                        <p class="txt-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem tempora eos deleniti.</p>
+                        <a href="#" class="btn-1">Leer más</a>
+                    </div>
+                </article>
+                
+                <article class="post">
+                    <img src="images/XGforinstyle.jpg" alt="Imagen relacionada con el post Lorem Ipsum" class="post-img">
+                    <div class="post-content">
+                        <h3>Lorem Ipsum</h3>
+                        <p class="post-date">Publicado el: 12 de Octubre, 2024</p>
                         <p class="txt-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem tempora eos deleniti.</p>
                         <a href="#" class="btn-1">Leer más</a>
                     </div>
@@ -68,8 +75,8 @@
                 <article class="post">
                     <img src="images/XGforinstyle.jpg" alt="Imagen relacionada con el post Lorem Ipsum" class="post-img">
                     <div class="post-content">
-                        <h2>Lorem Ipsum</h2>
-                        <p class="post-date">Publicado el: 8 de Octubre, 2024</p>
+                        <h3>Lorem Ipsum</h3>
+                        <p class="post-date">Publicado el: 12 de Octubre, 2024</p>
                         <p class="txt-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem tempora eos deleniti.</p>
                         <a href="#" class="btn-1">Leer más</a>
                     </div>
@@ -78,8 +85,8 @@
                 <article class="post">
                     <img src="images/XGforinstyle.jpg" alt="Imagen relacionada con el post Lorem Ipsum" class="post-img">
                     <div class="post-content">
-                        <h2>Lorem Ipsum</h2>
-                        <p class="post-date">Publicado el: 8 de Octubre, 2024</p>
+                        <h3>Lorem Ipsum</h3>
+                        <p class="post-date">Publicado el: 12 de Octubre, 2024</p>
                         <p class="txt-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem tempora eos deleniti.</p>
                         <a href="#" class="btn-1">Leer más</a>
                     </div>
@@ -88,25 +95,58 @@
                 <article class="post">
                     <img src="images/XGforinstyle.jpg" alt="Imagen relacionada con el post Lorem Ipsum" class="post-img">
                     <div class="post-content">
-                        <h2>Lorem Ipsum</h2>
-                        <p class="post-date">Publicado el: 8 de Octubre, 2024</p>
+                        <h3>Lorem Ipsum</h3>
+                        <p class="post-date">Publicado el: 12 de Octubre, 2024</p>
                         <p class="txt-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem tempora eos deleniti.</p>
                         <a href="#" class="btn-1">Leer más</a>
                     </div>
                 </article>
 
-                <article class="post">
-                    <img src="images/XGforinstyle.jpg" alt="Imagen relacionada con el post Lorem Ipsum" class="post-img">
-                    <div class="post-content">
-                        <h2>Lorem Ipsum</h2>
-                        <p class="post-date">Publicado el: 8 de Octubre, 2024</p>
-                        <p class="txt-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem tempora eos deleniti.</p>
-                        <a href="#" class="btn-1">Leer más</a>
-                    </div>
-                </article>
             </section>
         </div>
     </main>
+
+    <!-- Sobre mí -->
+    <section class="about" id="sobre-mi"> 
+        <div class="section-content">
+            <div class="image">
+                <img src="images/sobre mí.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Sobre mí</h3>
+                <p>Lorem ipsum dolor sit amet consectetur  amet consectetur adipisicing elit.</p>
+                <a href="#sobre-mi" class="btn-1">Ir</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Archivo -->
+    <section class="archive" id="archivo"> 
+        <div class="section-content">
+            <div class="image">
+                <img src="images/folder-file-icon-free-vector.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Archivo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur  amet consectetur adipisicing elit.</p>
+                <a href="#archivo" class="btn-1">Ir</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact" id="contacto"> 
+        <div class="section-content">
+            <div class="image">
+                <img src="images/img-contacto.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Contacto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur  amet consectetur adipisicing elit.</p>
+                <a href="#contacto" class="btn-1">Ir</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -115,14 +155,14 @@
                 <div class="social-media">
                     <a href="#" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
                     <a href="#" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
-                    <a href="#" aria-label="X"><i class="bx bx-x"></i></a> <!-- Cambiado a X -->
+                    <a href="#" aria-label="Twitter"><i class="bx bx-x"></i></a> <!-- Cambiado a Twitter -->
                 </div>
                 <nav class="navbar">
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Archivo</a></li>
-                        <li><a href="#">Contacto</a></li>
-                        <li><a href="#">Sobre mí</a></li>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#archivo">Archivo</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#sobre-mi">Sobre mí</a></li>
                     </ul>
                 </nav>
                 <p class="txt-footer">© 2024 Génesis Ramírez - Todos los derechos reservados</p>
@@ -130,14 +170,9 @@
         </div>
     </footer>
 
-
-    <!--Link to JQuery-->
-    <script
-  src="https://code.jquery.com/jquery-3.7.1.js"
-  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-  crossorigin="anonymous"></script>
-
-    <!--Link to JS-->
+    <!-- Link to JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- Link to JS -->
     <script src="main.js"></script>
 </body>
 </html>
