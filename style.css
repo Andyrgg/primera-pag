@@ -64,11 +64,11 @@ body {
 
 /* Header */
 .header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 200;
+    z-index: 10;
     background-color: var(--primary-color);
     padding: var(--spacing-medium) 0;
     box-shadow: 0 2px 4px var(--shadow-color);
@@ -86,9 +86,7 @@ body {
 }
 
 .logo-img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+  max-height: 50px;
 }
 
 .logo-text {
@@ -119,17 +117,37 @@ body {
     color: var(--secondary-color);
 }
 
+/* Estilo base del menú hamburguesa */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+/* Ocultar el input checkbox */
+.menu-toggle {
+  display: none;
+}
+
 /* Sección de Inicio */
 .inicio {
     width: 100%;
-    min-height: 200px;
+    min-height: 100px;
     display: grid;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: var(--bg-color-dark);
     color: var(--primary-color);
-    padding-top: 50px;
+    padding-top: 5px;
 }
 
 .inicio-title {
@@ -279,4 +297,75 @@ body {
     .post-list {
         grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
     }
+  /* Estilos para dispositivos pequeños */
+@media (max-width: 768px) {
+  .hamburger-menu {
+      display: flex;
+  }
+
+  .navbar {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #f5c6e6;
+      border-radius: 8px;
+      padding: 10px;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .menu-toggle:checked + .hamburger-menu + .navbar {
+      display: flex;
+  }
+
+  .navbar ul li a {
+      font-size: 14px;
+  }
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  /* Header */
+  .nav-links ul {
+    display: none; /* Ocultar el menú de enlaces por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #f5c6e6;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+
+  .nav-links ul.active {
+    display: flex; /* Mostrar menú cuando se active */
+  }
+
+  .menu-toggle {
+    display: flex; /* Mostrar botón hamburguesa */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 }

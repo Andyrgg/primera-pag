@@ -16,10 +16,19 @@
         <div class="menu container">
             <div class="logo-container">
                 <a href="#" class="logo">
-                    <img src="logo.png" alt="Gene" class="logo-img">
+                    <img src="images/pata (1).png" alt="Gene" class="logo-img">
                 </a>
             </div>
-            <nav class="navbar">
+        <!-- Ícono de menú hamburguesa -->
+        <div class="hamburger-menu" id="hamburger-menu">
+            &#9776;
+        <label for="menu-toggle" class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        </div>
+            <nav class="navbar" id="navbar">
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#archivo">Archivo</a></li>
@@ -174,5 +183,14 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <!-- Link to JS -->
     <script src="main.js"></script>
+    <!-- menu hamburguesa-->
+    <script>
+        const hamburgerMenu = document.getElementById("hamburger-menu");
+        const navbar = document.getElementById("navbar");
+    
+        hamburgerMenu.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        });
+    </script>    
 </body>
 </html>
